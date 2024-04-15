@@ -1,0 +1,20 @@
+{
+  "cadastros": [
+    {
+      "nome": "Clara Araujo Magalhães de Paula",
+      "email": "claraflor22@outlook.com",
+      "rg": "29342435534",
+      "cpf": "15068591785",
+      "aniversario": "2005-01-10",
+      "id": 1
+    },
+    {
+      "nome": "Clara Araujo Magalhães de Paula",
+      "email": "clarinhaaraujo898@gmail.com",
+      "rg": "290234038",
+      "cpf": "15068591785",
+      "aniversario": "2004-02-20",
+      "id": 2
+    }
+  ]
+}

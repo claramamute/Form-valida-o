@@ -1,10 +1,11 @@
 import ehUmCpf from "./validaCpf.js";
 import ehMaiorIdade from "./validaIdade.js";
+import { conectaApi } from "./armazena.js";
 
 const campos = document.querySelectorAll('[required]');
 const form = document.querySelector('[data-formulario]');
 
-form.addEventListener('submit', (e) =>{
+form.addEventListener('submit', async function criarCadastro(e) {
     e.preventDefault();
 
     const listaRespostas = {
@@ -16,13 +17,13 @@ form.addEventListener('submit', (e) =>{
 
     }
 
-    localStorage.setItem('cadastro', JSON.stringify(listaRespostas));
+    await conectaApi.criarCadastro(listaRespostas['nome'], listaRespostas['email'], listaRespostas['rg'], listaRespostas['cpf'], listaRespostas['aniversario']);
 
     window.location.href = './abrir-conta-form-2.html';
 })
 
 campos.forEach((campo) =>{
-    campo.addEventListener('blur', () => verificaCampo(campo));
+    campo.addEventListener("blur", () => verificaCampo(campo));
     campo.addEventListener("invalid", evento => evento.preventDefault())
 })
 
