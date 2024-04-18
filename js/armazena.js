@@ -1,7 +1,7 @@
 //Função assíncrona para criar um Cadastro e salvar no arquivo.json
 
 async function criarCadastro (nome,email,rg,cpf,aniversario){
-    const conexao = await fetch('http://localhost:3000/cadastros', //Espera o arquivo.json
+    const conexao = await fetch('https://cadastro-api-vert.vercel.app/cadastros', //Espera o arquivo.json
     {
         method: "POST", //Adiciona nele esse método para que seja possível inserir o conteúdo
         headers:{
